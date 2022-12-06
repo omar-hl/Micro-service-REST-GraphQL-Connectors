@@ -1,4 +1,4 @@
-package org.sid.bankaccountservice.entities;
+package org.sid.bankaccountservice.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -6,18 +6,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.sid.bankaccountservice.enums.AccountType;
 
-import javax.persistence.*;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import java.util.Date;
-@Entity
+
+
 @Data @NoArgsConstructor @AllArgsConstructor @Builder
-public class BankAccount {
-    @Id
-    private String id ;
-    private Date createdAt;
+public class BankAccountRequestDTO {
     private Double balance ;
     private String currency;
-    @Enumerated(EnumType.STRING)
     private AccountType type;
-    @ManyToOne
-    private Customer customer;
 }

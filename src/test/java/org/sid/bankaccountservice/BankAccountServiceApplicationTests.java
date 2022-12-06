@@ -1,13 +1,16 @@
 package org.sid.bankaccountservice;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.sid.bankaccountservice.entities.BankAccount;
+import org.sid.bankaccountservice.repositories.BankAccountRepository;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
-@SpringBootTest
+@SpringBootApplication
 class BankAccountServiceApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+	public static void main(String[] args) {
+		SpringApplication.run(BankAccountServiceApplication.class, args);
 
-}
+	}}
